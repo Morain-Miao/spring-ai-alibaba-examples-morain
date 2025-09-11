@@ -12,6 +12,17 @@ spring:
         client:
           base-url: http://127.0.0.1:8888
           timeout-seconds: 120
+          async:
+            # 是否启用异步执行
+            enabled: true
+            # 核心线程池大小
+            core-pool-size: 5
+            # 最大线程池大小
+            max-pool-size: 10
+            # 队列容量
+            queue-capacity: 100
+            # 线程名称前缀
+            thread-name-prefix: "mem0-async-"
         server:
           version: v0.1.116
           vector-store:
